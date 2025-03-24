@@ -1,38 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #0e0e0e;
-    color: white;
-    scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: #1e1e2e;
+  color: white;
 }
 
-.header {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(45deg, #1e1e1e, #3b3b3b);
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background: #12121e;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
-.about, .skills, .projects {
-    padding: 60px 20px;
-    text-align: center;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.skill-card, .project {
-    display: inline-block;
-    padding: 15px;
-    margin: 10px;
-    background: #222;
-    border-radius: 10px;
-    transition: transform 0.3s;
+.navbar ul {
+  display: flex;
+  list-style: none;
 }
 
-.skill-card:hover, .project:hover {
-    transform: scale(1.1);
+.navbar ul li {
+  margin: 0 15px;
 }
 
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: #1e1e1e;
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-button {
+  background: #ff6600;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.skills, .projects, .contact {
+  padding: 50px;
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background: #282838;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact a {
+  color: #ff6600;
 }
