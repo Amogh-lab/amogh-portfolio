@@ -1,0 +1,79 @@
+.hero-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  #particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+  
+    background: linear-gradient(to right, #ffffff, #e0aaff, #ff9cf3);
+  
+    display: inline-block; /* IMPORTANT */
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    /* text-fill-color: transparent; */
+  }
+  
+  .hero-content p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #d8b4fe;
+  }
+  
+  .hero-content button {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 999px;
+    background: #e0aaff;
+    color: #1a001f;
+    cursor: pointer;
+    box-shadow: 0 0 15px #e0aaff;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-content button:hover {
+    background: #ff9cf3;
+    box-shadow: 0 0 20px #ffb3ec;
+  }
+  .hero-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000000, #120122, #210122);
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  #particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
