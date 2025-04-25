@@ -1,0 +1,92 @@
+.my-image-wrapper {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    max-width: 470px;
+    z-index: 10;
+  }
+  
+  .my-image-border {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s ease;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(135deg, #ff86f18c, #724db6, #9af1ff);
+  }
+  
+  /* .my-image-border:hover {
+    transform: translateY(-8px);
+  }
+   */
+  .my-image {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 1px solid rgba(204, 0, 255, 0.2);
+  }
+  
+  /* Dev-looking floating shapes */
+  .floating-shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.2px solid rgba(225, 0, 255, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    animation: float 6s ease-in-out infinite alternate;
+    z-index: -1;
+  }
+  
+  .shape1 {
+    width: 120px;
+    height: 120px;
+    top: -30px;
+    left: -30px;
+    transform: rotate(15deg);
+  }
+  
+  .shape2 {
+    width: 150px;
+    height: 150px;
+    bottom: -40px;
+    right: -20px;
+    border-radius: 50%;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    100% {
+      transform: translateY(20px) rotate(5deg);
+    }
+  }
+
+  @keyframes neonPulse {
+    0% {
+      opacity: 0.6;
+      filter: blur(8px);
+    }
+    50% {
+      opacity: 1;
+      filter: blur(14px);
+    }
+    100% {
+      opacity: 0.6;
+      filter: blur(8px);
+    }
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .my-image-wrapper {
+      display: none;
+    }
+  }
+  

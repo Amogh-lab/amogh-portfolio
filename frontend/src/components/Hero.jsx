@@ -1,9 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import './Hero.css';
+import React from 'react'
 
 const Hero = () => {
+  const canvasRef = useRef(null);  // Use ref to access the canvas element
+
   useEffect(() => {
-    const canvas = document.getElementById("particles");
+    const canvas = canvasRef.current;  // Get the current canvas element
     const ctx = canvas.getContext("2d");
     let particles = [];
 
@@ -51,11 +54,16 @@ const Hero = () => {
     window.addEventListener('resize', resize);
     createParticles();
     animate();
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', resize);
+    };
   }, []);
 
   return (
     <div className="hero-background">
-      <canvas id="particles"></canvas>
+      <canvas ref={canvasRef}></canvas>  {/* Use ref here */}
     </div>
   );
 };
